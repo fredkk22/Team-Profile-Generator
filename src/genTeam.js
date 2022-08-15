@@ -10,7 +10,7 @@ return `<div class="card" style="width: 18rem;">
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${data.ID}</li>
-  <li class="list-group-item">Email: <a href="${data.email}">${data.email}</a></li>
+  <li class="list-group-item">Email: <a href = mailto: ${data.email}>${data.email}</a></li>
   <li class="list-group-item">Office Number: ${data.officeNumber}</li>
 </ul>
 </div>\n`
@@ -23,7 +23,7 @@ return `<div class="card" style="width: 18rem;">
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${data.ID}</li>
-  <li class="list-group-item">Email: <a href="${data.email}">${data.email}</a></li>
+  <li class="list-group-item">Email: <a href = mailto: ${data.email}>${data.email}</a></li>
   <li class="list-group-item">School: ${data.school}</li>
 </ul>
 </div>\n`
@@ -36,7 +36,7 @@ return `<div class="card" style="width: 18rem;">
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${data.ID}</li>
-  <li class="list-group-item">Email: <a href="${data.email}">${data.email}</a></li>
+  <li class="list-group-item">Email: <a href = mailto: ${data.email}>${data.email}</a></li>
   <li class="list-group-item">Github: https://github.com/${data.github}</li>
 </ul>
 </div>\n`
