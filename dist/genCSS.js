@@ -1,4 +1,5 @@
-* {
+function genCSS() {
+    return `* {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     
@@ -31,4 +32,7 @@
     
     .card {
         margin: 2rem;
-    }
+    }`
+}
+
+module.exports = genCSS;

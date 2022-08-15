@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const genTeam = require('./genTeam');
-const Employee = require('../lib/Employee');
+const genCSS = require('./genCSS');
 const Manager = require('../lib/Manager');
 const Intern = require('../lib/Intern');
 const Engineer = require('../lib/Engineer');
@@ -110,7 +110,7 @@ function engineerGen() {
             }
         ])
         .then((data) => {
-            const engineers = new Engineer(data.engineerName, data.engineerID, data.engineerEmail, data.engineerSchool);
+            const engineers = new Engineer(data.engineerName, data.engineerID, data.engineerEmail, data.engineerGit);
             team.push(engineers);
             newEmployeeGen();
         })
@@ -132,8 +132,8 @@ function newEmployeeGen() {
             } else {
                 fs.writeFile('index.html', genTeam(team), (error) =>
                     error ? console.error(error) : console.log('Team Complete!'))
-                fs.writeFile('style.css', genTeam(team), (error) =>
-                    error ? console.error(error) : console.log('Team Complete!'))
+                fs.writeFile('style.css', genCSS(), (error) =>
+                    error ? console.error(error) : console.log('CSS Attached!'))
             }
         })
 }
